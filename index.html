@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jupitor Cleaning & Maintenance</title>
 <meta name="description" content="Jupitor Cleaning & Maintenance (JCM): cleaning, electrical, plumbing and furniture repair for homes and businesses. 20% off your first clean.">
 <meta name="theme-color" content="#e8f3fb">
@@ -40,8 +40,13 @@
   --t-h3:clamp(1.5rem,1.2rem + 1vw,2.125rem); --t-h2:clamp(2.25rem,1.6rem + 2.6vw,3.75rem); --t-h1:clamp(3rem,1.9rem + 4.6vw,6rem);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{overflow-x:clip;-webkit-text-size-adjust:100%;scroll-padding-top:24px;scrollbar-color:var(--sky-deep) var(--bg)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--t-body)/1.6 var(--text);overflow-x:clip;touch-action:manipulation;-webkit-tap-highlight-color:rgba(16,155,220,.18);-webkit-font-smoothing:antialiased}
+html,body{overflow-x:hidden}
+/* Safari: let grid/flex tracks shrink below a photo's intrinsic 1024px width */
+.hero>*,.svc-grid>*,.s-clean>*,.svc>*,.why>*,.book>*,.builder>*,.faq-grid>*,.faq-col>*,.steps>*,.foot-top>*,.offer>*,.photo,.frame,.pic,.top-row>*,.val>*{min-width:0}
+.frame img,.pic img{width:100%}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:24px;scrollbar-color:var(--sky-deep) var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--t-body)/1.6 var(--text);width:100%;touch-action:manipulation;-webkit-tap-highlight-color:rgba(16,155,220,.18);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-0.015em;line-height:1.04;margin:0;text-wrap:balance}
